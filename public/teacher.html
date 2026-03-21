@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Quản lý Giáo viên</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Trang Quản Lý Giáo Viên</h1>
+        <button onclick="logout()">Đăng xuất</button>
+    </header>
+    <main class="teacher-container">
+        <h2>Tạo Bài Học Mới</h2>
+        <div class="form-group">
+            <label>Mã bài học (VD: LS2026):</label>
+            <input type="text" id="lessonCode" required>
+        </div>
+        <div class="form-group">
+            <label>Lý thuyết:</label>
+            <textarea id="lessonTheory" rows="4"></textarea>
+        </div>
+        
+        <div id="questionsContainer">
+            <div class="question-block">
+                <input type="text" class="q-text" placeholder="Nhập câu hỏi...">
+                <input type="text" class="q-ans" placeholder="Đáp án đúng">
+            </div>
+        </div>
+        
+        <button onclick="createLesson()">Lưu & Tạo Bài Học</button>
+        <p id="teacherMsg"></p>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

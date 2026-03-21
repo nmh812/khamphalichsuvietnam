@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Khu Vực Học Tập</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Khu Vực Học Tập</h1>
+        <button onclick="logout()">Đăng xuất</button>
+    </header>
+    <main class="student-container">
+        <div id="codeSection">
+            <h2>Nhập mã bài học</h2>
+            <input type="text" id="studentCode" placeholder="Mã bài học">
+            <button onclick="loadLesson()">Vào Học</button>
+            <p id="studentMsg"></p>
+        </div>
+
+        <div id="lessonSection" style="display:none;">
+            <h2 id="lTheoryHeading">Lý Thuyết</h2>
+            <p id="lTheoryText"></p>
+            
+            <h2>Bài Tập Trắc Nghiệm</h2>
+            <div id="quizForm"></div>
+            <button onclick="submitQuiz()">Nộp Bài</button>
+        </div>
+
+        <div id="leaderboardSection" style="display:none;">
+            <h2>Bảng Xếp Hạng</h2>
+            <p>Điểm của bạn: <span id="myScore"></span></p>
+            <table id="leaderboardTable">
+                <tr><th>Hạng</th><th>Tên</th><th>Điểm</th></tr>
+            </table>
+        </div>
+    </main>
+    <script src="js/script.js"></script>
+</body>
+</html>

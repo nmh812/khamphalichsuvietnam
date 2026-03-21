@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Bản Đồ Di Tích</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.css"/>
+</head>
+<body>
+    <header>
+        <h1>Bản Đồ Di Tích Lịch Sử</h1>
+        <button onclick="location.href='index.html'">Trang chủ</button>
+    </header>
+    <main class="map-layout">
+        <div id="map"></div>
+        
+        <div class="info-panel" id="infoPanel" style="display:none;">
+            <h2 id="placeName">Tên Di Tích</h2>
+            <p id="placeLocation">Tỉnh/Thành phố</p>
+            
+            <div id="panorama"></div> <div class="description-box">
+                <p id="placeDesc">Mô tả lịch sử...</p>
+                <button id="ttsBtn" onclick="speakText()">🔊 Nghe thuyết minh</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/pannellum@2.5.6/build/pannellum.js"></script>
+    <script src="js/script.js"></script>
+    <script>
+        // Init Map specific logic
+        initMap();
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>Đăng Nhập / Đăng Ký</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <h2>Hệ Thống Học Tập</h2>
+        <form id="authForm">
+            <input type="text" id="username" placeholder="Tên đăng nhập" required>
+            <input type="password" id="password" placeholder="Mật khẩu" required>
+            <select id="role">
+                <option value="student">Học sinh</option>
+                <option value="teacher">Giáo viên</option>
+            </select>
+            <div class="auth-buttons">
+                <button type="button" onclick="handleAuth('login')">Đăng Nhập</button>
+                <button type="button" onclick="handleAuth('register')">Đăng Ký</button>
+            </div>
+        </form>
+        <p id="authMessage"></p>
+        <button onclick="location.href='index.html'" class="btn-back">Quay lại Trang chủ</button>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
